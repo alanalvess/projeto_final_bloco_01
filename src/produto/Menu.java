@@ -1,10 +1,12 @@
-package projeto_final_bloco_01;
+package produto;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import projeto_final_bloco_01.produto.util.Cores;
+import produto.model.Console;
+import produto.model.Jogo;
+import produto.util.Cores;
 
 public class Menu {
 
@@ -14,8 +16,21 @@ public class Menu {
 
 		int opcao, codigo;
 		String nome, linkImagem;
-		float valor, tamanho;
+		float valor, tipo;
+		
 
+		Console console1 = new Console(123, "Playstation 5", "Console", 4000.0f, "https", "Playstation");
+		console1.visualizar();
+		
+		Console console2 = new Console(124, "Xbox Series S", "Console", 4500.0f, "https", "Xbox");
+		console2.visualizar();
+		
+		Jogo jogo1 = new Jogo(125, "God of War", "Jogo", 250.0f, "https", "Aventura");
+		jogo1.visualizar();
+		
+		Jogo jogo2 = new Jogo(126, "Grand Theft Auto", "Console", 200.0f, "https", "Carros");
+		jogo2.visualizar();
+		
 		while (true) {
 
 			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND

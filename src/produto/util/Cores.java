@@ -1,4 +1,4 @@
-package projeto_final_bloco_01.produto.util;
+package produto.util;
 
 public class Cores {
 
