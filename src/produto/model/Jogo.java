@@ -2,18 +2,18 @@ package produto.model;
 
 public class Jogo extends Produto {
 
-	private String categoriaJogo;
+	private int categoriaJogo;
 
-	public Jogo(int codigo, String nome, String tipo, float valor, String linkImagem, String categoriaJogo) {
-		super(codigo, nome, tipo, valor, linkImagem);
-		this.categoriaJogo = categoriaJogo;
+	public Jogo(int codigo, String nome, float valor, int tipo, int categoriaJogo) {
+		super(codigo, nome, valor, tipo);
+		this.setCategoriaJogo(categoriaJogo);
 	}
 
-	public String getCategoriaJogo() {
+	public int getCategoriaJogo() {
 		return categoriaJogo;
 	}
 
-	public void setCategoriaJogo(String categoriaJogo) {
+	public void setCategoriaJogo(int categoriaJogo) {
 		this.categoriaJogo = categoriaJogo;
 	}
 	

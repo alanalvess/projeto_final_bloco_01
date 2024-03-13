@@ -2,18 +2,18 @@ package produto.model;
 
 public class Console extends Produto {
 
-	private String categoriaConsole;
+	private int categoriaConsole;
 
-	public Console(int codigo, String nome, String tipo, float valor, String linkImagem, String categoriaConsole) {
-		super(codigo, nome, tipo, valor, linkImagem);
+	public Console(int codigo, String nome, float valor, int tipo, int categoriaConsole) {
+		super(codigo, nome, valor, tipo);
 		this.setCategoriaConsole(categoriaConsole);
 	}
 
-	public String getCategoriaConsole() {
+	public int getCategoriaConsole() {
 		return categoriaConsole;
 	}
 
-	public void setCategoriaConsole(String categoriaConsole) {
+	public void setCategoriaConsole(int categoriaConsole) {
 		this.categoriaConsole = categoriaConsole;
 	}
 
