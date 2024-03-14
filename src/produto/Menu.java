@@ -1,13 +1,13 @@
 package produto;
 
-import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 import produto.controller.ProdutoController;
 import produto.model.Console;
 import produto.model.Jogo;
 import produto.util.Cores;
+
+import java.io.IOException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Menu {
 
@@ -143,25 +143,25 @@ public class Menu {
 					tipo = buscaProduto.getTipo();
 
 					switch (tipo) {
-					case 1 -> {
-						System.out.println("Digite a Categoria do Console: ");
-						categoriaConsole = leia.nextInt();
-						produtos.atualizar(new Console(codigo, nome, valor, tipo, categoriaConsole));
-					}
-					case 2 -> {
-						System.out.println("Digite a Categoria do Jogo: ");
-						categoriaJogo = leia.nextInt();
-						produtos.atualizar(new Jogo(codigo, nome, valor, tipo, categoriaJogo));
+						case 1 -> {
+							System.out.println("Digite a Categoria do Console: ");
+							categoriaConsole = leia.nextInt();
+							produtos.atualizar(new Console(codigo, nome, valor, tipo, categoriaConsole));
+						}
+						case 2 -> {
+							System.out.println("Digite a Categoria do Jogo: ");
+							categoriaJogo = leia.nextInt();
+							produtos.atualizar(new Jogo(codigo, nome, valor, tipo, categoriaJogo));
+						}
+
+						default -> {
+							System.out.println("Tipo de Produto Inválido!");
+						}
 					}
 
-					default -> {
-						System.out.println("Tipo de Produto Inválido!");
-					}
-
-					}
-
-				} else
+				} else {
 					System.out.println("\nProduto não encontrado!");
+				}
 
 				keyPress();
 				break;
@@ -203,7 +203,6 @@ public class Menu {
 
 		} catch (IOException e) {
 			System.out.println("Você pressionou uma tecla diferente de enter!");
-
 		}
 	}
 }
