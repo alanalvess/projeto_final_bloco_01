@@ -143,17 +143,20 @@ public class Menu {
 					tipo = buscaProduto.getTipo();
 
 					switch (tipo) {
-					case 1:
+					case 1 -> {
 						System.out.println("Digite a Categoria do Console: ");
 						categoriaConsole = leia.nextInt();
 						produtos.atualizar(new Console(codigo, nome, valor, tipo, categoriaConsole));
-
-					case 2:
+					}
+					case 2 -> {
 						System.out.println("Digite a Categoria do Jogo: ");
 						categoriaJogo = leia.nextInt();
 						produtos.atualizar(new Jogo(codigo, nome, valor, tipo, categoriaJogo));
-					default:
+					}
+
+					default -> {
 						System.out.println("Tipo de Produto Inválido!");
+					}
 
 					}
 
