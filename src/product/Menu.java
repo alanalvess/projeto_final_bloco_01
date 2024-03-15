@@ -45,9 +45,9 @@ public class Menu {
 					"\n                                                     " +
 					"\n*****************************************************" +
 					"\n                                                     " +
-					"\n\t\t1 - Create a Products                            " +
-					"\n\t\t2 - List all Products                            " +
-					"\n\t\t3 - Find Products by Code                        " +
+					"\n\t\t1 - Create a Product                            " +
+					"\n\t\t2 - List all Product                            " +
+					"\n\t\t3 - Find Product by Code                        " +
 					"\n\t\t4 - Update Product Details                       " +
 					"\n\t\t5 - Delete a Product                             " +
 					"\n\t\t6 - Exit                                         " +
@@ -112,7 +112,7 @@ public class Menu {
 				break;
 
 			case 2:
-				System.out.println(Colors.TEXT_WHITE + "List All Products\n\n");
+				System.out.println(Colors.TEXT_WHITE + "List All Product\n\n");
 
 				products.listAllProducts();
 
@@ -120,7 +120,7 @@ public class Menu {
 				break;
 
 			case 3:
-				System.out.println(Colors.TEXT_WHITE + "Find Products by Code\n\n");
+				System.out.println(Colors.TEXT_WHITE + "Find Product by Code\n\n");
 
 				System.out.println("Enter Product Code: ");
 				code = read.nextInt();

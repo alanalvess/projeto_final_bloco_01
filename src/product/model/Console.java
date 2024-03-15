@@ -1,6 +1,6 @@
 package product.model;
 
-public class Console extends Products {
+public class Console extends Product {
 
 	private String consoleCategory;
 
@@ -20,7 +20,8 @@ public class Console extends Products {
 	@Override
 	public void view() {
 		super.view();
-		System.out.printf("\nConsole Category: %s", this.consoleCategory);
+		System.out.printf("\nConsole Category: %s" +
+				"\nConsole Image URL: %s", this.consoleCategory, this.getLinkImage());
 	}
 
 }

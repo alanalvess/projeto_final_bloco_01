@@ -1,13 +1,13 @@
 package product.controller;
 
-import product.model.Products;
+import product.model.Product;
 import product.repository.ProductRepository;
 
 import java.util.ArrayList;
 
 public class ProductController implements ProductRepository {
 
-	private final ArrayList<Products> products = new ArrayList<>();
+	private final ArrayList<Product> products = new ArrayList<>();
 
 	int code = 0;
 
@@ -32,21 +32,21 @@ public class ProductController implements ProductRepository {
 	}
 
 	@Override
-	public void create(Products products) {
-		this.products.add(products);
-		System.out.printf("\nproduct %s was successfully registered", products.getName());
+	public void create(Product product) {
+		this.products.add(product);
+		System.out.printf("\nproduct %s was successfully registered", product.getName());
 	}
 
 	@Override
-	public void update(Products products) {
+	public void update(Product product) {
 
-		var findCode = findInCollection(products.getCode());
+		var findCode = findInCollection(product.getCode());
 
 		if (findCode != null) {
-			this.products.set(this.products.indexOf(findCode), products);
-			System.out.printf("\nAccount number %d has been updated successfully!", products.getCode());
+			this.products.set(this.products.indexOf(findCode), product);
+			System.out.printf("\nAccount number %d has been updated successfully!", product.getCode());
 		} else {
-			System.out.printf("\nAccount number %d was not found!", products.getCode());
+			System.out.printf("\nAccount number %d was not found!", product.getCode());
 		}
 
 	}
@@ -69,7 +69,7 @@ public class ProductController implements ProductRepository {
 		return ++code;
 	}
 
-	public Products findInCollection(int code) {
+	public Product findInCollection(int code) {
 		for (var product : products) {
 			if (product.getCode() == code) {
 				return product;

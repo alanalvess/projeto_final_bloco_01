@@ -1,6 +1,6 @@
 package product.model;
 
-public class Game extends Products {
+public class Game extends Product {
 
 	private String gameCategory;
 
@@ -20,6 +20,7 @@ public class Game extends Products {
 	@Override
 	public void view() {
 		super.view();
-		System.out.printf("\nGame category: %s", this.gameCategory);
+		System.out.printf("\nGame category: %s" +
+				"\nGame Image URL: %s", this.gameCategory, this.getLinkImage());
 	}
 }

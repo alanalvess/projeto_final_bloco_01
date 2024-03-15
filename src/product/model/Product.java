@@ -1,6 +1,6 @@
 package product.model;
 
-public abstract class Products {
+public abstract class Product {
 
 	private int code;
 	private String name;
@@ -8,7 +8,7 @@ public abstract class Products {
 	private int type;
 	private String linkImage;
 
-	public Products(int code, String name, float price, int type, String linkImage) {
+	public Product(int code, String name, float price, int type, String linkImage) {
 		this.code = code;
 		this.name = name;
 		this.price = price;

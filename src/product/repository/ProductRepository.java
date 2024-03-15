@@ -1,12 +1,12 @@
 package product.repository;
 
-import product.model.Products;
+import product.model.Product;
 
 public interface ProductRepository {
 
-	void create(Products products);
+	void create(Product product);
 
-	void update(Products products);
+	void update(Product product);
 
 	void listAllProducts();
 
