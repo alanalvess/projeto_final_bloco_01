@@ -1,6 +1,6 @@
-package produto.util;
+package product.util;
 
-public class Cores {
+public class Colors {
 
 	// Reset Color
 	public static final String TEXT_RESET = "\u001B[0m";
